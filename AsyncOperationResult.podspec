@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 	spec.name = "AsyncOperationResult"
-	spec.version = "1.0.0"
+	spec.version = "1.0.1"
 	spec.summary = "Asynchronous Operations Results in Swift"
 	spec.homepage = "https://www.happn.com/"
 	spec.license = {type: 'TBD', file: 'License.txt'}
