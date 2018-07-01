@@ -752,7 +752,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-tvOS";
 				PRODUCT_NAME = AsyncOperationResult;
 				SDKROOT = appletvos;
@@ -778,7 +777,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-tvOS";
 				PRODUCT_NAME = AsyncOperationResult;
 				SDKROOT = appletvos;
@@ -842,7 +840,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-macOS";
 				PRODUCT_NAME = AsyncOperationResult;
 				SDKROOT = macosx;
@@ -870,7 +867,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-macOS";
 				PRODUCT_NAME = AsyncOperationResult;
 				SDKROOT = macosx;
@@ -931,7 +927,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-watchOS";
 				PRODUCT_NAME = AsyncOperationResult;
 				SDKROOT = watchos;
@@ -958,7 +953,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-watchOS";
 				PRODUCT_NAME = AsyncOperationResult;
 				SDKROOT = watchos;
@@ -983,7 +977,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-iOS";
 				PRODUCT_NAME = AsyncOperationResult;
 				SDKROOT = iphoneos;
@@ -1009,7 +1002,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-iOS";
 				PRODUCT_NAME = AsyncOperationResult;
 				SDKROOT = iphoneos;
