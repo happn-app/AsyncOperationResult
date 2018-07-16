@@ -22,6 +22,13 @@ public enum AsyncOperationResult<T> {
 		}
 	}
 	
+	public func successValueOrThrow() throws -> T {
+		switch self {
+		case .success(let v): return v
+		case .error(let e): throw e
+		}
+	}
+	
 	public var error: Error? {
 		switch self {
 		case .error(let e): return e

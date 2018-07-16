@@ -10,6 +10,7 @@ class AsyncOperationResultTests: XCTestCase {
 		let success = AsyncOperationResult.success(str)
 		XCTAssertTrue(success.isSuccessful)
 		XCTAssertEqual(success.successValue, str)
+		XCTAssertEqual(try success.successValueOrThrow(), str)
 		XCTAssertNil(success.error)
 	}
 	
@@ -19,6 +20,7 @@ class AsyncOperationResultTests: XCTestCase {
 		XCTAssertFalse(success.isSuccessful)
 		XCTAssertNil(success.successValue)
 		XCTAssertEqual(success.error as NSError?, error)
+		XCTAssertThrowsError(try success.successValueOrThrow())
 	}
 	
 	
