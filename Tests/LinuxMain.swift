@@ -1,8 +1,8 @@
 import XCTest
-@testable import AsyncOperationResultTests
 
+import AsyncOperationResultTests
 
+var tests = [XCTestCaseEntry]()
+tests += AsyncOperationResultTests.__allTests()
 
-XCTMain([
-	testCase(AsyncOperationResultTests.allTests)
-])
+XCTMain(tests)
