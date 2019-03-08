@@ -10,6 +10,7 @@
 		7B20A3F12013D8EC000E869D /* AsyncOperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20A3F02013D8EC000E869D /* AsyncOperationResult.swift */; };
 		7B8BD02320026E8C009BE667 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* AsyncOperationResult.framework */; };
 		7B8BD036200274B9009BE667 /* AsyncOperationResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* AsyncOperationResultTests.swift */; };
+		7BAA30942232AC93000DB394 /* AsyncOperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20A3F02013D8EC000E869D /* AsyncOperationResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -18,7 +19,7 @@
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
-			remoteInfo = "happnLogger-macOS";
+			remoteInfo = AsyncOperationResult;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -33,6 +34,7 @@
 		7B8BD02920026E8C009BE667 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		7B8BD032200274B9009BE667 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		7B8BD034200274B9009BE667 /* AsyncOperationResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperationResultTests.swift; sourceTree = "<group>"; };
+		7BAA309B2232AC93000DB394 /* AsyncOperationResult.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsyncOperationResult.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B8BD02320026E8C009BE667 /* AsyncOperationResult.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BAA30952232AC93000DB394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +81,7 @@
 			children = (
 				7B8BD01A20026E8C009BE667 /* AsyncOperationResult.framework */,
 				7B8BD02220026E8C009BE667 /* AsyncOperationResult-Tests.xctest */,
+				7BAA309B2232AC93000DB394 /* AsyncOperationResult.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +138,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7BAA30962232AC93000DB394 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -145,7 +162,7 @@
 			dependencies = (
 			);
 			name = AsyncOperationResult;
-			productName = "happnLogger-macOS";
+			productName = AsyncOperationResult;
 			productReference = 7B8BD01A20026E8C009BE667 /* AsyncOperationResult.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -163,9 +180,27 @@
 				7B8BD02520026E8C009BE667 /* PBXTargetDependency */,
 			);
 			name = "AsyncOperationResult-Tests";
-			productName = "happnLogger-macOSTests";
+			productName = "AsyncOperationResult-Tests";
 			productReference = 7B8BD02220026E8C009BE667 /* AsyncOperationResult-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BAA30922232AC93000DB394 /* AsyncOperationResult-Static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BAA30982232AC93000DB394 /* Build configuration list for PBXNativeTarget "AsyncOperationResult-Static" */;
+			buildPhases = (
+				7BAA30932232AC93000DB394 /* Sources */,
+				7BAA30952232AC93000DB394 /* Frameworks */,
+				7BAA30962232AC93000DB394 /* Headers */,
+				7BAA30972232AC93000DB394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AsyncOperationResult-Static";
+			productName = AsyncOperationResult;
+			productReference = 7BAA309B2232AC93000DB394 /* AsyncOperationResult.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -187,6 +222,9 @@
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
+					7BAA30922232AC93000DB394 = {
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 7B661F9620026ACC00486182 /* Build configuration list for PBXProject "AsyncOperationResult" */;
@@ -202,6 +240,7 @@
 			projectRoot = "";
 			targets = (
 				7B8BD01920026E8C009BE667 /* AsyncOperationResult */,
+				7BAA30922232AC93000DB394 /* AsyncOperationResult-Static */,
 				7B8BD02120026E8C009BE667 /* AsyncOperationResult-Tests */,
 			);
 		};
@@ -216,6 +255,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7B8BD02020026E8C009BE667 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BAA30972232AC93000DB394 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,6 +284,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B8BD036200274B9009BE667 /* AsyncOperationResultTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BAA30932232AC93000DB394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BAA30942232AC93000DB394 /* AsyncOperationResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +337,13 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -301,13 +360,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = "";
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -343,8 +408,13 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -355,13 +425,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = "";
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -371,25 +446,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.AsyncOperationResult;
 				PRODUCT_NAME = AsyncOperationResult;
-				RESOURCES_TARGETED_DEVICE_FAMILY = "1,2,3,4";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -398,24 +460,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.AsyncOperationResult;
 				PRODUCT_NAME = AsyncOperationResult;
-				RESOURCES_TARGETED_DEVICE_FAMILY = "1,2,3,4";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -425,16 +475,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -444,15 +489,43 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		7BAA30992232AC93000DB394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.AsyncOperationResult;
+				PRODUCT_NAME = AsyncOperationResult;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7BAA309A2232AC93000DB394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.AsyncOperationResult;
+				PRODUCT_NAME = AsyncOperationResult;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -482,6 +555,15 @@
 			buildConfigurations = (
 				7B8BD02F20026E8C009BE667 /* Debug */,
 				7B8BD03020026E8C009BE667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BAA30982232AC93000DB394 /* Build configuration list for PBXNativeTarget "AsyncOperationResult-Static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BAA30992232AC93000DB394 /* Debug */,
+				7BAA309A2232AC93000DB394 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
