@@ -30,7 +30,7 @@
 		7B21BAD12003BF0600DFF758 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		7B8BD01A20026E8C009BE667 /* AsyncOperationResult.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsyncOperationResult.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD01D20026E8C009BE667 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
-		7B8BD02220026E8C009BE667 /* AsyncOperationResult-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AsyncOperationResult-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8BD02220026E8C009BE667 /* AsyncOperationResultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncOperationResultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD02920026E8C009BE667 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		7B8BD032200274B9009BE667 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		7B8BD034200274B9009BE667 /* AsyncOperationResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperationResultTests.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				7B8BD01A20026E8C009BE667 /* AsyncOperationResult.framework */,
-				7B8BD02220026E8C009BE667 /* AsyncOperationResult-Tests.xctest */,
+				7B8BD02220026E8C009BE667 /* AsyncOperationResultTests.xctest */,
 				7BAA309B2232AC93000DB394 /* AsyncOperationResult.framework */,
 			);
 			name = Products;
@@ -166,9 +166,9 @@
 			productReference = 7B8BD01A20026E8C009BE667 /* AsyncOperationResult.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7B8BD02120026E8C009BE667 /* AsyncOperationResult-Tests */ = {
+		7B8BD02120026E8C009BE667 /* AsyncOperationResultTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B8BD02E20026E8C009BE667 /* Build configuration list for PBXNativeTarget "AsyncOperationResult-Tests" */;
+			buildConfigurationList = 7B8BD02E20026E8C009BE667 /* Build configuration list for PBXNativeTarget "AsyncOperationResultTests" */;
 			buildPhases = (
 				7B8BD01E20026E8C009BE667 /* Sources */,
 				7B8BD01F20026E8C009BE667 /* Frameworks */,
@@ -179,9 +179,9 @@
 			dependencies = (
 				7B8BD02520026E8C009BE667 /* PBXTargetDependency */,
 			);
-			name = "AsyncOperationResult-Tests";
+			name = AsyncOperationResultTests;
 			productName = "AsyncOperationResult-Tests";
-			productReference = 7B8BD02220026E8C009BE667 /* AsyncOperationResult-Tests.xctest */;
+			productReference = 7B8BD02220026E8C009BE667 /* AsyncOperationResultTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		7BAA30922232AC93000DB394 /* AsyncOperationResult-Static */ = {
@@ -241,7 +241,7 @@
 			targets = (
 				7B8BD01920026E8C009BE667 /* AsyncOperationResult */,
 				7BAA30922232AC93000DB394 /* AsyncOperationResult-Static */,
-				7B8BD02120026E8C009BE667 /* AsyncOperationResult-Tests */,
+				7B8BD02120026E8C009BE667 /* AsyncOperationResultTests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,8 +342,8 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.4;
+				DYLIB_CURRENT_VERSION = 1.0.5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_VERSION = A;
@@ -373,7 +373,7 @@
 				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				VERSION_INFO_PREFIX = HPN;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -414,8 +414,8 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.4;
+				DYLIB_CURRENT_VERSION = 1.0.5;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
@@ -438,7 +438,7 @@
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				VERSION_INFO_PREFIX = HPN;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -476,9 +476,8 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-Tests";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.AsyncOperationResultTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -490,9 +489,8 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-Tests";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.AsyncOperationResultTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -504,7 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = com.happn.AsyncOperationResult;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-Static";
 				PRODUCT_NAME = AsyncOperationResult;
 			};
 			name = Debug;
@@ -516,7 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = com.happn.AsyncOperationResult;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.AsyncOperationResult-Static";
 				PRODUCT_NAME = AsyncOperationResult;
 			};
 			name = Release;
@@ -542,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B8BD02E20026E8C009BE667 /* Build configuration list for PBXNativeTarget "AsyncOperationResult-Tests" */ = {
+		7B8BD02E20026E8C009BE667 /* Build configuration list for PBXNativeTarget "AsyncOperationResultTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B8BD02F20026E8C009BE667 /* Debug */,
