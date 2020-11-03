@@ -7,12 +7,6 @@ import PackageDescription
 
 let package = Package(
 	name: "AsyncOperationResult",
-	platforms: [
-		.macOS(.v10_10),
-		.iOS(.v8),
-		.tvOS(.v9),
-		.watchOS(.v2)
-	],
 	products: [
 		.library(
 			name: "AsyncOperationResult",
